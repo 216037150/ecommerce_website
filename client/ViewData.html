@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Data Page</title>
+    <link rel="stylesheet" href="/css/VIEWDATA.css">
+    <style>
+        table {
+            border-collapse: collapse; /* Use collapse for borders */
+            width: 100%; /* Optional: make table full width */
+        }
+
+        th, td {
+            padding: 10px; /* Adjust as needed */
+            border: 1px solid #ccc; /* Add border for horizontal lines */
+            text-align: left; /* Align text */
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            font-size: large;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="user-data">
+            <h1>User's Data</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="/client/fetchData.js"></script>
+</body>
+</html>
