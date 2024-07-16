@@ -1,7 +1,6 @@
 # ecommerce_website
 
-# Express.js Application Documentation
-## Overview
+##### Overview
 This application is a simple web server built with Express.js that connects to a MongoDB database. It provides user registration, login functionality, and serves static files and HTML pages.
 
 # Dependencies
