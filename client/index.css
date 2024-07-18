@@ -28,3 +28,9 @@ a {
 button:hover {
     color: red;
 }
+
+.social-icon {
+    font-size: 2rem; /* Adjust size as needed */
+    color: white;
+    margin-right: 10px; /* Adjust spacing between icons */
+}

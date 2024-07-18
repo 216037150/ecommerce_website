@@ -5,19 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foot Ware</title>
-    <!-- <link rel="stylesheet" href="index.css"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
 
     <style>
         * {
-            margin: 0px;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
             font-family: sans-serif;
-
         }
 
         nav {
@@ -28,15 +25,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0px 50px;
+            padding: 0 50px;
             position: fixed;
-            top: 0px;
+            top: 0;
             z-index: 1;
         }
 
         .logo {
             font-size: 32px;
             font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
         }
 
         .menu {
@@ -65,7 +66,6 @@
             display: flex;
             align-items: center;
             margin-right: 0;
-            height: #333;
         }
 
         .search form {
@@ -78,14 +78,11 @@
             border: 1px solid #ddd;
             outline: none;
             border-radius: 5px;
-            margin-right: 10px;
             font-size: 16px;
-
         }
 
         .search input:hover {
-            border: 1px solid #72a0d4;
-
+            border-color: #72a0d4;
         }
 
         .search button {
@@ -110,51 +107,117 @@
             border-radius: 20px;
             cursor: pointer;
             display: block;
-            /* Ensures the button behaves like a block-level element */
             margin: 20px auto;
-            /* Centers the button horizontally within its container */
             text-align: center;
         }
 
         .viewData a {
             text-decoration: none;
-            text-align: center;
             color: black;
-            /* Set the text color to black */
         }
 
-        footer button {
-            margin-bottom: 0px;
-        }
-
-        .jersey-container{
-            margin-top: 50px;
+        .jersey-container,
+        .soccer-container,
+        .sneaker-container {
             display: flex;
             justify-content: space-around;
             padding: 20px;
+            margin-top: 50px;
             background-color: #f9f9f9;
         }
 
-
         .soccer-container {
-            margin-top: 50px;
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-            background-color:aqua;
+            background-color: aqua;
             animation: animateRg 5s linear infinite;
         }
 
         .sneaker-container {
-            margin-top: 50px;
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
+            background-color: #ccc;
         }
+
         @keyframes animateRg {
-            0% { background-color: transparent; }
-            50% { background-color: rgba(0, 0, 0, 0.1); }
-            100% { background-color: transparent; }
+            0% {
+                background-color: transparent;
+            }
+
+            50% {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+
+            100% {
+                background-color: transparent;
+            }
+        }
+
+        .social-icon {
+            font-size: 2rem;
+            color: white;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .row-footer {
+            display: flex;
+            background-color: black;
+            height: 400px;
+            width: 100%;
+            color: white;
+            padding: 20px;
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                right: 0;
+                background-color: #333;
+                text-align: center;
+                padding: 10px 0;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+                color: white;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 2;
+            }
+
+            .menu li {
+                margin: 10px 0;
+            }
+
+            .search {
+                display: flex;
+                margin-right: 20px;
+            }
+
+            .jersey-container,
+            .soccer-container,
+            .sneaker-container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .jersey,
+            .soccer,
+            .sneaker {
+                width: 100%;
+                max-width: 150px;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -162,6 +225,7 @@
 <body>
     <nav>
         <div class="logo">SPORT.</div>
+        <i class='bx bx-menu menu-toggle'></i>
         <ul class="menu">
             <li><a href="">HOME</a></li>
             <li><a href="">About</a></li>
@@ -172,7 +236,7 @@
         <div class="search">
             <form action="/search" method="get">
                 <input type="text" name="query" placeholder="Search...">
-                <button type="submit">Go</button>
+                <!-- <button type="submit">Go</button> -->
             </form>
         </div>
     </nav>
@@ -203,20 +267,32 @@
         <div class="sneaker"><img src="../images/sneaker5.png" alt=""></div>
     </div>
 
-
-
-    <br><br><br><br><br><br><br>
-
-
-
-
-
-
-    <script src="formValidation.js"></script>
-    <script src="fetchData.js"></script>
     <footer>
-        <button class="viewData"><a href="http://localhost:3000/ViewData">View Users</a></button>
+        <div class="row-footer">
+            <div class="more-info">
+                <p>The information about website</p>
+            </div>
+            <div class="good-delivery">
+                <p>Method for delivery</p>
+            </div>
+            <div class="contact-us" style="color: white; padding: 20px;">
+                <h3>Follow Us On </h3>
+                <box-icon name='instagram' type='logo' class="bx social-icon"></box-icon>
+                <box-icon name='tiktok' type='logo' class="bx social-icon"></box-icon>
+                <box-icon name='twitter' type='logo' class="bx social-icon"></box-icon>
+                <box-icon name='facebook' type='logo' class="bx social-icon"></box-icon>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
