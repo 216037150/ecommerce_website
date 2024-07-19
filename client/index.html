@@ -29,11 +29,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-<<<<<<< Updated upstream
             padding: 0 50px;
-=======
-            padding: 20px 50px;
->>>>>>> Stashed changes
             position: fixed;
             top: 0;
             z-index: 1;
@@ -74,13 +70,6 @@
             display: flex;
             align-items: center;
             margin-right: 0;
-<<<<<<< Updated upstream
-=======
-            height: #333;
-            border-radius: 10px;
-            padding: 10px 20px;
-
->>>>>>> Stashed changes
         }
 
         .search form {
@@ -139,34 +128,20 @@
             color: black;
         }
 
-<<<<<<< Updated upstream
         .jersey-container,
         .soccer-container,
         .sneaker-container {
-=======
-        footer button {
-            margin-bottom: 0px;
-        }
-
-        .jersey-container {
-            margin-top: 90px;
->>>>>>> Stashed changes
             display: flex;
             justify-content: space-around;
             padding: 20px;
             margin-top: 50px;
             background-color: #f9f9f9;
         }
-
         .soccer-container {
-<<<<<<< Updated upstream
-            background-color: aqua;
-=======
             margin-top: 50px;
             display: flex;
             justify-content: space-around;
             padding: 20px;
->>>>>>> Stashed changes
             animation: animateRg 5s linear infinite;
         }
 
@@ -186,7 +161,6 @@
             100% {
                 background-color: transparent;
             }
-<<<<<<< Updated upstream
         }
 
         .social-icon {
@@ -258,8 +232,6 @@
                 max-width: 150px;
                 margin-bottom: 20px;
             }
-=======
->>>>>>> Stashed changes
         }
 
 
@@ -298,6 +270,46 @@ h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
+
+/* contact */.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.home-sci a:hover {
+    background: rgb(3, 55, 59);
+    color: #0ef;
+    box-shadow: 0 0 20px #0ef;
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
     </style>
 </head>
 
@@ -314,13 +326,8 @@ h2 {
         </ul>
         <div class="search">
             <form action="/search" method="get">
-<<<<<<< Updated upstream
                 <input type="text" name="query" placeholder="Search...">
                 <!-- <button type="submit">Go</button> -->
-=======
-                <input type="text" name="query" placeholder="Search..." class="searchInput">
-                <button type="submit">Go</button>
->>>>>>> Stashed changes
             </form>
         </div>
 
@@ -367,61 +374,32 @@ h2 {
         <div class="sneaker"><img src="../images/sneaker5.png" alt=""></div>
     </div>
 
-<<<<<<< Updated upstream
     <footer>
         <div class="row-footer">
             <div class="more-info">
-                <p>The information about website</p>
-            </div>
-            <div class="good-delivery">
-                <p>Method for delivery</p>
+                <p style="text-align: center;">The information about website</p>
             </div>
             <div class="contact-us" style="color: white; padding: 20px;">
-                <h3>Follow Us On </h3>
-                <box-icon name='instagram' type='logo' class="bx social-icon"></box-icon>
-                <box-icon name='tiktok' type='logo' class="bx social-icon"></box-icon>
-                <box-icon name='twitter' type='logo' class="bx social-icon"></box-icon>
-                <box-icon name='facebook' type='logo' class="bx social-icon"></box-icon>
+                <h3 style="text-align: center;">Follow Us On</h3>
+                <div class="home-sci">
+                    <a href="https://www.instagram.com/accounts/onetap/?next=%2F&hl=en"><i class="bx bxl-instagram"
+                            style="color: #1be0b8;"></i></a>
+                    <a href="https://twitter.com/home?lang=en-za"><i class="bx bxl-twitter" style="color: #1be0b8;"></i></a>
+                     <a href="https://web.telegram.org/"><i class="bx bxl-telegram" style="color: #1be0b8;"></i></a>
+                    <a href=""><i class='bx bxl-facebook'></i></a>
+                </div>
+            </div>
+            <div class="good-delivery">
+                <p style="text-align: center;">Method for delivery</p>
+                <a href=""> <i class='bx bxl-truck' sty></i></a>
             </div>
         </div>
-=======
-    <h2>Take care of your Hair </h2>
-
-    <div class="hair-style">
-        <div class="thando1">
-            <img src="../images/Thando1.jpg" alt="">
-        </div>
-        <div class="thando2">
-            <img src="../images/Thando2.jpg" alt="" style="height: 935px;">
-        </div>
-    </div>
-
-    <div class="slider">
-        <div class="sliderWrapper">
-            <div class="sliderItem">
-                <img src="../images/sneaker1.png" alt="" class="sliderImg">
-                <div class="slideBg"></div>
-                <h1 class="sliderTitle">AIR FORCE <br>NEW <br>SEASON </h1>
-                <h2 class="sliderPrice">R 1500.99</h2>
-                <button class="buyButton">By Now</button>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <script src="formValidation.js"></script>
-    <script src="fetchData.js"></script>
-    <footer>
-        <!-- <button class="viewData"><a href="http://localhost:3000/ViewData">View Users</a></button> -->
->>>>>>> Stashed changes
+        <p style="color: white; text-align: center; margin-top: -92px; margin-left: 70px;">&copy; 2024 Foot Ware. All rights reserved.</p>
     </footer>
-
+    
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.menu');
-
         menuToggle.addEventListener('click', () => {
             menu.classList.toggle('active');
         });
