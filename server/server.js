@@ -16,8 +16,8 @@ app.use(session({
     saveUninitialized: true,
 }));
 
-const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/";
-const dbName = process.env.DB_NAME || "customer";
+const uri = process.env.MONGODB_URI || "mongodb+srv://siyabongazungu95:Siyabonga%40100@cluster0.kp8zlnn.mongodb.net/";
+const dbName = process.env.DB_NAME || "ECORMMERCE";
 const collectionName = "Users";
 
 const client = new MongoClient(uri, { useUnifiedTopology: true });
